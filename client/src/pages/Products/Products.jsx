@@ -1,11 +1,8 @@
-import React from 'react'
+import React from 'react';
+import "./Products.scss"
 
 function Products() {
-  return (
-    <div>
-      <h1>Hi</h1>
-    </div>
-  )
+  return <div className="products">Products</div>;
 }
 
-export default Products
+export default Products;

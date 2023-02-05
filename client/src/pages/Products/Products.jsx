@@ -1,7 +1,16 @@
 import React from 'react';
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import List from "../../components/List/List";
 import './Products.scss';
 
 const Products = () => {
+
+  const catId = parseInt(useParams().id);
+  const [maxPrice, setMaxPrice] = useState(1000);
+  const [sort, setSort] = useState(null);
+  const [selectedSubCats, setSelectedSubCats] = useState([]);
+
   return (
     <div className="products">
       <div className="left">
@@ -45,7 +54,8 @@ const Products = () => {
           src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt=""
         />
-
+        <List
+        />
       </div>
     </div>
   );
